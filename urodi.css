@@ -1,0 +1,97 @@
+
+#mainmenu ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-image: url(spele/sizzling.jpg);
+  display: flex;
+	align-items: stretch;
+	justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+	}
+	
+	#mainmenu li {
+	float: left;
+	}
+	
+	#mainmenu li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+  text-align: center;
+	}
+	
+	#mainmenu li a:hover {
+	background-color: #111;
+	}
+/* bachas puzzle saakas */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-shadow: black;
+  text-shadow:
+	0.06em 0 black,
+	0 0.06em black,
+	-0.06em 0 black,
+	0 -0.06em black;
+  opacity: 1;
+}
+
+body {
+  background-image: url(https://www.gannett-cdn.com/-mm-/af938e544a1905fb0c3756c4073d62eb7f14dfcf/c=0-346-4702-3003/local/-/media/2015/02/25/DetroitFreePress/DetroitFreePress/635604547493317168-AP-Casinos-Inflated-Expectat.jpg?width=2560);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.memory-game {
+  width: 640px;
+  height: 640px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+
+.memory-card {
+  width: calc(25% - 10px);
+  height: calc(33.333% - 10px);
+  margin: 5px;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .5s;
+  box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+}
+
+.memory-card:active {
+  transform: scale(0.97);
+  transition: transform .2s;
+}
+
+.memory-card.flip {
+  transform: rotateY(180deg);
+}
+
+.front-face,
+.back-face {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  position: absolute;
+  border-radius: 5px;
+  background: black;
+  backface-visibility: hidden;
+}
+
+.front-face {
+  transform: rotateY(180deg);
+}
+/* bachas puzzle beidzas */
