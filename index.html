@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html><head>
+  <title></title>
+  <style>
+    #jumpscare {
+      position: absolute; top: 0px;left:0px;width: 100%; height: 100%; cursor: pointer; visibility: hidden;
+    }
+  </style>
+</head>
+
+  <body style="text-align:center; background-color: black; font-family: tahoma;">
+    <h1 style="color:white;">SPIED UZ BAČAS</h1>
+    <h1 style="color:white;">↓↓↓</h1>
+    <br><br><br><br>
+
+    <img style="cursor:pointer;width: 300px;height: 300px; border:solid 5px white" src="jumpscare/images.jpg" onclick="jumpscare()">
+    <img id="jumpscare" src="https://media.tenor.com/KTiZ4ggeMxwAAAAC/jeff-jeff-the-killer.gif">
+    <audio id="scream" src="jumpscare/sound.mp3"></audio>
+    <script>
+      function jumpscare() {
+        var jumpscare = document.getElementById('jumpscare');
+        jumpscare.style.visibility="visible";
+        var audio = document.getElementById('scream');
+        audio.play();
+      }
+    </script>
+  </body>
+</html>
